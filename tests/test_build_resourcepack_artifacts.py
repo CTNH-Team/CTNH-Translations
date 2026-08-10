@@ -25,28 +25,28 @@ class BuildResourcepackArtifactsTests(unittest.TestCase):
         progress_entries = {
             "en_us": [
                 {
-                    "remote_name": "GTOCore/en_us.json",
-                    "output_path": "en_us/resourcepacks/gto-lang-en_us/assets/gtocore/lang/en_us.json",
+                    "remote_name": "CTNH/en_us.json",
+                    "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/ctnh/lang/en_us.json",
                     "total": 100,
                     "stats": {"emitted_entries": 25},
                 },
                 {
-                    "remote_name": "GTOdyssey/en_us.json",
-                    "output_path": "en_us/resourcepacks/gto-lang-en_us/assets/gto/lang/en_us.json",
+                    "remote_name": "CTNHCore/en_us.json",
+                    "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/ctnhcore/lang/en_us.json",
                     "total": 40,
                     "stats": {"emitted_entries": 10},
                 },
             ],
             "ru_ru": [
                 {
-                    "remote_name": "GTOCore/ru_ru.json",
-                    "output_path": "ru_ru/resourcepacks/gto-lang-ru_ru/assets/gtocore/lang/ru_ru.json",
+                    "remote_name": "CTNH/ru_ru.json",
+                    "output_path": "ru_ru/resourcepacks/ctnh-lang-ru_ru/assets/ctnh/lang/ru_ru.json",
                     "total": 100,
                     "stats": {"emitted_entries": 90},
                 },
                 {
-                    "remote_name": "GTOdyssey/ru_ru.json",
-                    "output_path": "ru_ru/resourcepacks/gto-lang-ru_ru/assets/gto/lang/ru_ru.json",
+                    "remote_name": "CTNHCore/ru_ru.json",
+                    "output_path": "ru_ru/resourcepacks/ctnh-lang-ru_ru/assets/ctnhcore/lang/ru_ru.json",
                     "total": 40,
                     "stats": {"emitted_entries": 20},
                 },
@@ -54,26 +54,26 @@ class BuildResourcepackArtifactsTests(unittest.TestCase):
         }
 
         for locale in ("en_us", "ru_ru"):
-            base = self.temp_root / locale / "resourcepacks" / f"gto-lang-{locale}"
+            base = self.temp_root / locale / "resourcepacks" / f"ctnh-lang-{locale}"
             write_json(
                 base / "pack.mcmeta",
                 {
                     "pack": {
                         "pack_format": 15,
-                        "description": f"GTO translations ({locale}) | seeded",
+                        "description": f"CTNH translations ({locale}) | seeded",
                     }
                 },
             )
             write_json(
-                base / "assets" / "gtocore" / "lang" / f"{locale}.json",
+                base / "assets" / "ctnh" / "lang" / f"{locale}.json",
                 {
-                    f"core.{locale}": f"core-{locale}",
+                    f"quest.{locale}": f"quest-{locale}",
                 },
             )
             write_json(
-                base / "assets" / "gto" / "lang" / f"{locale}.json",
+                base / "assets" / "ctnhcore" / "lang" / f"{locale}.json",
                 {
-                    f"quest.{locale}": f"quest-{locale}",
+                    f"core.{locale}": f"core-{locale}",
                 },
             )
             write_json(
@@ -90,12 +90,12 @@ class BuildResourcepackArtifactsTests(unittest.TestCase):
 
     def test_stage_single_locale_artifact_preserves_resourcepack_layout(self) -> None:
         metadata = artifacts_module.build_artifact_metadata(
-            artifact_version="gto-0.5.4-dev-26.04.04.12-abcd1234",
+            artifact_version="ctnh-1.5.0-dev-26.08.10.12-abcd1234",
             artifact_kind="locale",
             locales=["en_us"],
-            release_line="gto-0.5.4",
+            release_line="ctnh-1.5.0",
             source_revision="abcd1234",
-            built_at="2026-04-04T00:00:00Z",
+            built_at="2026-08-10T00:00:00Z",
         )
         artifact_root = artifacts_module.stage_single_locale_artifact(
             repo_root=self.temp_root,
@@ -104,24 +104,24 @@ class BuildResourcepackArtifactsTests(unittest.TestCase):
             artifact_metadata=metadata,
         )
 
-        self.assertEqual(artifact_root, self.output_dir / "gto-lang-en_us-gto-0.5.4-dev-26.04.04.12-abcd1234")
+        self.assertEqual(artifact_root, self.output_dir / "ctnh-lang-en_us-ctnh-1.5.0-dev-26.08.10.12-abcd1234")
         self.assertTrue((artifact_root / "pack.mcmeta").exists())
-        self.assertTrue((artifact_root / "assets" / "gtocore" / "lang" / "en_us.json").exists())
+        self.assertTrue((artifact_root / "assets" / "ctnh" / "lang" / "en_us.json").exists())
         self.assertEqual(
             json.loads(
                 (artifact_root / artifacts_module.ARTIFACT_METADATA_FILE_NAME).read_text(encoding="utf-8")
             )["artifact_version"],
-            "gto-0.5.4-dev-26.04.04.12-abcd1234",
+            "ctnh-1.5.0-dev-26.08.10.12-abcd1234",
         )
 
     def test_stage_combined_artifact_merges_all_locale_lang_files(self) -> None:
         metadata = artifacts_module.build_artifact_metadata(
-            artifact_version="gto-0.5.4-dev-26.04.04.12-abcd1234",
+            artifact_version="ctnh-1.5.0-dev-26.08.10.12-abcd1234",
             artifact_kind="combined",
             locales=["en_us", "ru_ru"],
-            release_line="gto-0.5.4",
+            release_line="ctnh-1.5.0",
             source_revision="abcd1234",
-            built_at="2026-04-04T00:00:00Z",
+            built_at="2026-08-10T00:00:00Z",
         )
         artifact_root = artifacts_module.stage_combined_artifact(
             repo_root=self.temp_root,
@@ -130,17 +130,17 @@ class BuildResourcepackArtifactsTests(unittest.TestCase):
             artifact_metadata=metadata,
         )
 
-        self.assertEqual(artifact_root, self.output_dir / "gto-lang-all-locales-gto-0.5.4-dev-26.04.04.12-abcd1234")
+        self.assertEqual(artifact_root, self.output_dir / "ctnh-lang-all-locales-ctnh-1.5.0-dev-26.08.10.12-abcd1234")
         combined_pack = artifact_root
         self.assertTrue((combined_pack / "pack.mcmeta").exists())
         self.assertEqual(
             json.loads((combined_pack / "pack.mcmeta").read_text(encoding="utf-8"))["pack"]["description"],
-            "GTO translations (all-locales) | GTOCore 57.5% | GTOdyssey 37.5%",
+            "CTNH translations (all-locales) | CTNH 57.5% | CTNHCore 37.5%",
         )
-        self.assertTrue((combined_pack / "assets" / "gtocore" / "lang" / "en_us.json").exists())
-        self.assertTrue((combined_pack / "assets" / "gtocore" / "lang" / "ru_ru.json").exists())
-        self.assertTrue((combined_pack / "assets" / "gto" / "lang" / "en_us.json").exists())
-        self.assertTrue((combined_pack / "assets" / "gto" / "lang" / "ru_ru.json").exists())
+        self.assertTrue((combined_pack / "assets" / "ctnh" / "lang" / "en_us.json").exists())
+        self.assertTrue((combined_pack / "assets" / "ctnh" / "lang" / "ru_ru.json").exists())
+        self.assertTrue((combined_pack / "assets" / "ctnhcore" / "lang" / "en_us.json").exists())
+        self.assertTrue((combined_pack / "assets" / "ctnhcore" / "lang" / "ru_ru.json").exists())
         self.assertEqual(
             json.loads((combined_pack / artifacts_module.ARTIFACT_METADATA_FILE_NAME).read_text(encoding="utf-8"))["artifact_kind"],
             "combined",
@@ -148,7 +148,7 @@ class BuildResourcepackArtifactsTests(unittest.TestCase):
 
     def test_stage_combined_artifact_rejects_mismatched_pack_metadata(self) -> None:
         write_json(
-            self.temp_root / "ru_ru" / "resourcepacks" / "gto-lang-ru_ru" / "pack.mcmeta",
+            self.temp_root / "ru_ru" / "resourcepacks" / "ctnh-lang-ru_ru" / "pack.mcmeta",
             {
                 "pack": {
                     "pack_format": 99,

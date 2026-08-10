@@ -1,12 +1,15 @@
 import argparse
+import ipaddress
 import json
 import os
+import socket
 import sys
 import time
 from datetime import UTC, datetime, timedelta, timezone
 from pathlib import Path, PurePosixPath
 from typing import Any
 from urllib.error import HTTPError, URLError
+from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
 import en_us_manual_stage_one as en_us_stage_one
@@ -28,18 +31,64 @@ DEFAULT_OUTPUT_DIR = "."
 DEFAULT_MANIFEST_PATH = ".paratranz-sync/manifest.json"
 DEFAULT_TIMEOUT = 30
 MAX_RETRIES = 3
-RESOURCEPACK_NAME_PREFIX = "gto-lang"
-PROGRESS_METADATA_FILE_NAME = ".gto-progress.json"
+RESOURCEPACK_NAME_PREFIX = "ctnh-lang"
+PROGRESS_METADATA_FILE_NAME = ".ctnh-progress.json"
 DEFAULT_TIMEZONE = timezone(timedelta(hours=8), name="UTC+08:00")
 MODULE_OUTPUT_PATHS = {
-    "gtocore": ("assets", "gtocore", "lang"),
-    "gtodyssey": ("assets", "gto", "lang"),
+    "ctnh": ("assets", "ctnh", "lang"),
+    "ctnhcore": ("assets", "ctnhcore", "lang"),
+    "ctnhmana": ("assets", "ctnhmana", "lang"),
+    "ctnhbio": ("assets", "ctnhbio", "lang"),
+    "ctnhenergy": ("assets", "ctnhenergy", "lang"),
+    "ctnhastral": ("assets", "ctnhastral", "lang"),
+    "ctnhlib": ("assets", "ctnhlib", "lang"),
+    "ctpp": ("assets", "ctpp", "lang"),
+    "cei": ("assets", "cei", "lang"),
 }
 MODULE_DISPLAY_NAMES = {
-    "gtocore": "GTOCore",
-    "gtodyssey": "GTOdyssey",
+    "ctnh": "CTNH",
+    "ctnhcore": "CTNHCore",
+    "ctnhmana": "CTNHMana",
+    "ctnhbio": "CTNHBio",
+    "ctnhenergy": "CTNHEnergy",
+    "ctnhastral": "CTNHAstral",
+    "ctnhlib": "CTNHLib",
+    "ctpp": "CTPP",
+    "cei": "CEI",
 }
 EN_US_LOCALE = "en_us"
+ALLOWED_URL_SCHEMES = {"http", "https"}
+
+
+def validate_request_url(url: str) -> None:
+    """Only allow http/https requests to public hosts.
+
+    Rejects localhost, loopback, private, link-local, reserved, multicast, and
+    unspecified addresses before any request is sent.
+    """
+    parsed = urlparse(url)
+    if parsed.scheme not in ALLOWED_URL_SCHEMES:
+        raise ValueError(f"Unsupported URL scheme: {parsed.scheme}")
+    host = parsed.hostname
+    if not host:
+        raise ValueError(f"URL is missing a host: {url}")
+    if host.lower() == "localhost":
+        raise ValueError(f"Localhost is not allowed: {host}")
+    try:
+        resolved = {item[4][0] for item in socket.getaddrinfo(host, None, proto=socket.IPPROTO_TCP)}
+    except OSError as error:
+        raise ValueError(f"Could not resolve host: {host}") from error
+    for ip_text in resolved:
+        ip = ipaddress.ip_address(ip_text)
+        if (
+            ip.is_loopback
+            or ip.is_private
+            or ip.is_link_local
+            or ip.is_reserved
+            or ip.is_multicast
+            or ip.is_unspecified
+        ):
+            raise ValueError(f"Host resolves to a non-public address: {host} -> {ip}")
 
 
 class ParatranzClient:
@@ -49,11 +98,12 @@ class ParatranzClient:
         self.headers = {
             "Authorization": f"Bearer {token}",
             "Accept": "application/json",
-            "User-Agent": "gto-lang-sync/1.0",
+            "User-Agent": "ctnh-lang-sync/1.0",
         }
 
     def _get_json(self, path: str) -> Any:
         url = f"{self.base_url}{path}"
+        validate_request_url(url)
         last_error: Exception | None = None
 
         for attempt in range(1, MAX_RETRIES + 1):
@@ -263,7 +313,7 @@ def build_pack_mcmeta(label: str) -> dict[str, Any]:
     return {
         "pack": {
             "pack_format": 15,
-            "description": f"GTO translations ({label})",
+            "description": f"CTNH translations ({label})",
         }
     }
 
@@ -305,7 +355,7 @@ def build_progress_suffix(file_entries: list[dict[str, Any]]) -> str:
 
 
 def build_locale_pack_description(label: str, file_entries: list[dict[str, Any]]) -> str:
-    base_description = f"GTO translations ({label})"
+    base_description = f"CTNH translations ({label})"
     progress_suffix = build_progress_suffix(file_entries)
     if not progress_suffix:
         return base_description

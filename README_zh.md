@@ -1,8 +1,8 @@
-# GTO-Translations
+# CTNH-Translations
 
 [English](README.md) | **简体中文**
 
-社区主导的 GTO 翻译仓库。
+社区主导的 CTNH 翻译仓库。
 
 Paratranz 项目中的翻译会定期同步到本仓库。
 
@@ -12,9 +12,9 @@ Paratranz 项目中的翻译会定期同步到本仓库。
 
 ## 下载
 
-稳定版请从 [GitHub Releases](https://github.com/GregTech-Odyssey/GTO-Translations/releases) 下载。
+稳定版请从 [GitHub Releases](https://github.com/GregTech-Odyssey/CTNH-Translations/releases) 下载。
 
-最新快照构建可在 [GitHub Actions](https://github.com/GregTech-Odyssey/GTO-Translations/actions) 的 `Sync Paratranz Translations` 工作流中下载 artifacts。
+最新快照构建可在 [GitHub Actions](https://github.com/GregTech-Odyssey/CTNH-Translations/actions) 的 `Sync Paratranz Translations` 工作流中下载 artifacts。
 
 下载后的 zip 使用方法：
 
@@ -25,10 +25,10 @@ Paratranz 项目中的翻译会定期同步到本仓库。
 
 压缩包说明：
 
-- `gto-lang-en_us-<version>.zip`：英文资源包
-- `gto-lang-ru_ru-<version>.zip`：俄文资源包
-- `gto-lang-ja_jp-<version>.zip`：日文资源包
-- `gto-lang-all-locales-<version>.zip`：包含全部已支持语言的组合包
+- `CTNH-lang-en_us-<version>.zip`：英文资源包
+- `CTNH-lang-ru_ru-<version>.zip`：俄文资源包
+- `CTNH-lang-ja_jp-<version>.zip`：日文资源包
+- `CTNH-lang-all-locales-<version>.zip`：包含全部已支持语言的组合包
 
 ---
 
@@ -36,9 +36,9 @@ Paratranz 项目中的翻译会定期同步到本仓库。
 
 翻译贡献请通过 Paratranz 提交：
 
-- [en_us](https://paratranz.cn/projects/16320)
-- [ru_ru](https://paratranz.cn/projects/16525)
-- [ja_jp](https://paratranz.cn/projects/18185)
+- [en_us](https://paratranz.cn/projects/20208)
+- [ru_ru](https://paratranz.cn/projects/20210)
+- [ja_jp](https://paratranz.cn/projects/20209)
 
 ## 翻译流程
 
@@ -58,7 +58,7 @@ Paratranz 项目中的翻译会定期同步到本仓库。
 
 本仓库内容主要由社区贡献。除另有说明外，相关翻译内容的原始版权归其各自贡献者所有，并按本仓库所述的 CC BY-NC-SA 4.0 许可进行分发。
 
-GregTech-Odyssey 及本仓库维护者不将这些内容视为官方内容，亦不对其准确性、完整性、适用性或持续可用性作出任何明示或默示保证。
+CTNH 项目组及本仓库维护者不将这些内容视为官方内容，亦不对其准确性、完整性、适用性或持续可用性作出任何明示或默示保证。
 
 ## 许可证
 

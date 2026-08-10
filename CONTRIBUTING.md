@@ -4,7 +4,7 @@
 
 Project configuration is stored in `.paratranz-sync.yml`.
 
-- `release.product`: release prefix, currently `gto`
+- `release.product`: release prefix, currently `ctnh`
 - `release.primary_project_id`: Paratranz project used as the version source
 - `release.current_version`: last synced upstream version, updated automatically by the sync workflow
 - `projects`: supported locales, their Paratranz project IDs, and per-locale stage export filters such as `allowed_stages`
@@ -31,9 +31,9 @@ Stable releases are published by pushing a Git tag.
 
 `Publish Stable Release` is triggered by tags matching:
 
-`gto-*-r*`
+`ctnh-*-r*`
 
-example: `gto-0.5.4-r1`
+example: `ctnh-1.5.0-r1`
 
 It rebuilds artifacts from the tagged commit and publishes a GitHub Release automatically.
 
@@ -49,18 +49,18 @@ Example:
 
 ```bash
 git checkout <commit>
-git tag -a gto-0.5.4-r1 -m "Stable translation release gto-0.5.4-r1"
-git push origin gto-0.5.4-r1
+git tag -a ctnh-1.5.0-r1 -m "Stable translation release ctnh-1.5.0-r1"
+git push origin ctnh-1.5.0-r1
 ```
 
 ## Adding a New Locale
 
-If you want to add support for a new language, please contact [GregTech-Odyssey](https://github.com/GregTech-Odyssey) first. Opening an issue in the main repository or reaching out through the GTO Discord are both fine.
+If you want to add support for a new language, please contact the CTNH team first. Opening an issue in the main repository is fine.
 
-GregTech-Odyssey will create and own the corresponding Paratranz project before the language is added to this repository:
+The CTNH team will create and own the corresponding Paratranz project before the language is added to this repository:
 
 1. Ownership of the Paratranz project does not mean the translation is official content. The project is still community-maintained.
-2. GregTech-Odyssey keeps Paratranz project ownership so that if the original contributor or organizer of a locale steps away, the project can still be operated and the translation workflow can remain stable.
+2. The CTNH team keeps Paratranz project ownership so that if the original contributor or organizer of a locale steps away, the project can still be operated and the translation workflow can remain stable.
 3. By contributing translation content through the Paratranz project, contributors agree that their contributions may be distributed under this repository's CC BY-NC-SA 4.0 license.
 
 After the Paratranz project is created, contributors should join that project on Paratranz and do the translation work there.

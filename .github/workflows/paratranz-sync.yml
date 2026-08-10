@@ -139,9 +139,9 @@ jobs:
         with:
           name: en_us-${{ steps.version.outputs.artifact_version }}
           path: |
-            dist/artifacts/gto-lang-en_us-${{ steps.version.outputs.artifact_version }}/pack.mcmeta
-            dist/artifacts/gto-lang-en_us-${{ steps.version.outputs.artifact_version }}/assets
-            dist/artifacts/gto-lang-en_us-${{ steps.version.outputs.artifact_version }}/gto-artifact-metadata.json
+            dist/artifacts/ctnh-lang-en_us-${{ steps.version.outputs.artifact_version }}/pack.mcmeta
+            dist/artifacts/ctnh-lang-en_us-${{ steps.version.outputs.artifact_version }}/assets
+            dist/artifacts/ctnh-lang-en_us-${{ steps.version.outputs.artifact_version }}/ctnh-artifact-metadata.json
           if-no-files-found: error
 
       - name: Upload ru_ru artifact
@@ -150,9 +150,9 @@ jobs:
         with:
           name: ru_ru-${{ steps.version.outputs.artifact_version }}
           path: |
-            dist/artifacts/gto-lang-ru_ru-${{ steps.version.outputs.artifact_version }}/pack.mcmeta
-            dist/artifacts/gto-lang-ru_ru-${{ steps.version.outputs.artifact_version }}/assets
-            dist/artifacts/gto-lang-ru_ru-${{ steps.version.outputs.artifact_version }}/gto-artifact-metadata.json
+            dist/artifacts/ctnh-lang-ru_ru-${{ steps.version.outputs.artifact_version }}/pack.mcmeta
+            dist/artifacts/ctnh-lang-ru_ru-${{ steps.version.outputs.artifact_version }}/assets
+            dist/artifacts/ctnh-lang-ru_ru-${{ steps.version.outputs.artifact_version }}/ctnh-artifact-metadata.json
           if-no-files-found: error
 
       - name: Upload ja_jp artifact
@@ -161,9 +161,9 @@ jobs:
         with:
           name: ja_jp-${{ steps.version.outputs.artifact_version }}
           path: |
-            dist/artifacts/gto-lang-ja_jp-${{ steps.version.outputs.artifact_version }}/pack.mcmeta
-            dist/artifacts/gto-lang-ja_jp-${{ steps.version.outputs.artifact_version }}/assets
-            dist/artifacts/gto-lang-ja_jp-${{ steps.version.outputs.artifact_version }}/gto-artifact-metadata.json
+            dist/artifacts/ctnh-lang-ja_jp-${{ steps.version.outputs.artifact_version }}/pack.mcmeta
+            dist/artifacts/ctnh-lang-ja_jp-${{ steps.version.outputs.artifact_version }}/assets
+            dist/artifacts/ctnh-lang-ja_jp-${{ steps.version.outputs.artifact_version }}/ctnh-artifact-metadata.json
           if-no-files-found: error
 
       - name: Upload combined artifact
@@ -172,9 +172,9 @@ jobs:
         with:
           name: all-locales-${{ steps.version.outputs.artifact_version }}
           path: |
-            dist/artifacts/gto-lang-all-locales-${{ steps.version.outputs.artifact_version }}/pack.mcmeta
-            dist/artifacts/gto-lang-all-locales-${{ steps.version.outputs.artifact_version }}/assets
-            dist/artifacts/gto-lang-all-locales-${{ steps.version.outputs.artifact_version }}/gto-artifact-metadata.json
+            dist/artifacts/ctnh-lang-all-locales-${{ steps.version.outputs.artifact_version }}/pack.mcmeta
+            dist/artifacts/ctnh-lang-all-locales-${{ steps.version.outputs.artifact_version }}/assets
+            dist/artifacts/ctnh-lang-all-locales-${{ steps.version.outputs.artifact_version }}/ctnh-artifact-metadata.json
           if-no-files-found: error
 
       - name: Push translation commit

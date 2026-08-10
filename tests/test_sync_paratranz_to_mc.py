@@ -20,85 +20,85 @@ class FakeClient:
         self.translation_calls: list[tuple[int, int]] = []
         self.detailed_string_calls: list[tuple[int, int]] = []
         self.projects = {
-            16320: {
-                "id": 16320,
-                "name": "GregTech-Odyssey(en)",
+            16924: {
+                "id": 16924,
+                "name": "CTNH(en)",
                 "source": "zh-cn",
                 "dest": "en",
                 "reviewMode": 1,
                 "extra": {
-                    "version": "0.5.4",
-                    "compatible": "GregTech.Odyssey-0.5.4-beta",
+                    "version": "1.5.0",
+                    "compatible": "CTNH-1.5.0",
                 },
             },
-            16525: {
-                "id": 16525,
-                "name": "GregTech-Odyssey(ru)",
+            26999: {
+                "id": 26999,
+                "name": "CTNH(ru)",
                 "source": "zh-cn",
                 "dest": "ru",
                 "reviewMode": 1,
                 "extra": {
-                    "version": "0.5.4",
-                    "compatible": "GregTech.Odyssey-0.5.4-beta",
+                    "version": "1.5.0",
+                    "compatible": "CTNH-1.5.0",
                 },
             },
-            18185: {
-                "id": 18185,
-                "name": "GregTech-Odyssey(ja)",
+            28999: {
+                "id": 28999,
+                "name": "CTNH(ja)",
                 "source": "zh-cn",
                 "dest": "ja",
                 "reviewMode": 1,
                 "extra": {
-                    "version": "0.5.4",
-                    "compatible": "GregTech.Odyssey-0.5.4-beta",
+                    "version": "1.5.0",
+                    "compatible": "CTNH-1.5.0",
                 },
             }
         }
         self.files = {
-            16320: [
+            16924: [
                 {
                     "id": 10,
-                    "name": "GTOCore/en_us.json",
+                    "name": "CTNH/en_us.json",
                     "total": 4,
                     "translated": 3,
                     "reviewed": 1,
-                    "modifiedAt": "2026-04-02T05:50:05.758Z",
+                    "modifiedAt": "2026-08-10T05:50:05.758Z",
                     "format": "jsonkv",
                 },
                 {
                     "id": 11,
-                    "name": "GTOdyssey/en_us.json",
+                    "name": "CTNHCore/en_us.json",
                     "total": 1,
                     "translated": 1,
                     "reviewed": 1,
-                    "modifiedAt": "2026-04-02T05:52:16.017Z",
+                    "modifiedAt": "2026-08-10T05:52:16.017Z",
                     "format": "jsonkv",
                 },
             ]
             ,
-            18185: [
+            28999: [
                 {
                     "id": 20,
-                    "name": "GTOCore/ja_jp.json",
+                    "name": "CTNH/ja_jp.json",
                     "total": 4,
                     "translated": 3,
                     "reviewed": 0,
-                    "modifiedAt": "2026-04-02T06:00:00.000Z",
+                    "modifiedAt": "2026-08-10T06:00:00.000Z",
                     "format": "jsonkv",
                 },
             ],
         }
         self.translations = {
-            (16320, 10): [
+            (16924, 10): [
                 {"key": "key.a", "translation": "Alpha", "stage": 1},
                 {"key": "key.b", "translation": "", "stage": 0},
                 {"key": "key.hidden", "original": "Hidden Original", "translation": "", "stage": -1},
                 {"key": "key.c", "translation": "Gamma", "stage": 5},
             ],
-            (16320, 11): [
+            (16924, 11): [
                 {"key": "key.d", "translation": "Delta", "stage": 1},
             ],
-            (18185, 20): [
+            (28999, 20): [
                 {"key": "key.jp.hidden", "original": "JP Hidden Original", "translation": "", "stage": -1},
                 {"key": "key.jp.reviewed", "translation": "Reviewed", "stage": 5},
                 {"key": "key.jp.translated", "translation": "Translated", "stage": 1},
@@ -106,7 +106,7 @@ class FakeClient:
             ],
         }
         self.detailed_strings = {
-            (16320, 10): [
+            (16924, 10): [
                 {
                     "key": "key.a",
                     "translation": "Alpha",
@@ -115,7 +115,7 @@ class FakeClient:
                         {
                             "field": "translation",
                             "operation": "translate",
-                            "createdAt": "2026-04-02T00:00:01Z",
+                            "createdAt": "2026-08-10T00:00:01Z",
                         }
                     ],
                 },
@@ -127,7 +127,7 @@ class FakeClient:
                         {
                             "field": "translation",
                             "operation": "translate",
-                            "createdAt": "2026-04-02T00:00:02Z",
+                            "createdAt": "2026-08-10T00:00:02Z",
                         }
                     ],
                 },
@@ -139,7 +139,7 @@ class FakeClient:
                         {
                             "field": "translation",
                             "operation": "import",
-                            "createdAt": "2026-04-02T00:00:03Z",
+                            "createdAt": "2026-08-10T00:00:03Z",
                         }
                     ],
                 },
@@ -151,14 +151,14 @@ class FakeClient:
                         {
                             "field": "translation",
                             "operation": "edit",
-                            "createdAt": "2026-04-02T00:00:04Z",
+                            "createdAt": "2026-08-10T00:00:04Z",
                         }
                     ],
                     "importHistory": [
                         {
                             "field": "translation",
                             "operation": "import",
-                            "createdAt": "2026-04-02T00:00:05Z",
+                            "createdAt": "2026-08-10T00:00:05Z",
                         }
                     ],
                 },
@@ -170,12 +170,12 @@ class FakeClient:
                         {
                             "field": "translation",
                             "operation": "translate",
-                            "createdAt": "2026-04-02T00:00:06Z",
+                            "createdAt": "2026-08-10T00:00:06Z",
                         }
                     ],
                 },
             ],
-            (16320, 11): [
+            (16924, 11): [
                 {
                     "key": "key.d",
                     "translation": "Delta",
@@ -184,7 +184,7 @@ class FakeClient:
                         {
                             "field": "translation",
                             "operation": "edit",
-                            "createdAt": "2026-04-02T00:00:07Z",
+                            "createdAt": "2026-08-10T00:00:07Z",
                         }
                     ],
                 }
@@ -340,7 +340,7 @@ class EnUsManualStageOneTests(unittest.TestCase):
                     {
                         "field": "translation",
                         "operation": "translate",
-                        "createdAt": "2026-04-02T00:00:01Z",
+                        "createdAt": "2026-08-10T00:00:01Z",
                     }
                 ],
             },
@@ -352,7 +352,7 @@ class EnUsManualStageOneTests(unittest.TestCase):
                     {
                         "field": "translation",
                         "operation": "translate",
-                        "createdAt": "2026-04-02T00:00:01Z",
+                        "createdAt": "2026-08-10T00:00:01Z",
                     }
                 ],
             },
@@ -364,7 +364,7 @@ class EnUsManualStageOneTests(unittest.TestCase):
                     {
                         "field": "translation",
                         "operation": "import",
-                        "createdAt": "2026-04-02T00:00:02Z",
+                        "createdAt": "2026-08-10T00:00:02Z",
                     }
                 ],
             },
@@ -376,14 +376,14 @@ class EnUsManualStageOneTests(unittest.TestCase):
                     {
                         "field": "translation",
                         "operation": "edit",
-                        "createdAt": "2026-04-02T00:00:03Z",
+                        "createdAt": "2026-08-10T00:00:03Z",
                     }
                 ],
                 "importHistory": [
                     {
                         "field": "translation",
                         "operation": "import",
-                        "createdAt": "2026-04-02T00:00:04Z",
+                        "createdAt": "2026-08-10T00:00:04Z",
                     }
                 ],
             },
@@ -395,7 +395,7 @@ class EnUsManualStageOneTests(unittest.TestCase):
                     {
                         "field": "translation",
                         "operation": "translate",
-                        "createdAt": "2026-04-02T00:00:05Z",
+                        "createdAt": "2026-08-10T00:00:05Z",
                     }
                 ],
             },
@@ -407,7 +407,7 @@ class EnUsManualStageOneTests(unittest.TestCase):
                     {
                         "field": "translation",
                         "operation": "translate",
-                        "createdAt": "2026-04-02T00:00:06Z",
+                        "createdAt": "2026-08-10T00:00:06Z",
                     }
                 ],
             },
@@ -455,76 +455,115 @@ class ResolveReleaseLineTests(unittest.TestCase):
 
         result = sync_module.resolve_release_line(
             client=client,
-            release_product="gto",
-            primary_project_id=16320,
-            comparison_project_ids=[16525, 18185],
+            release_product="ctnh",
+            primary_project_id=16924,
+            comparison_project_ids=[26999, 28999],
         )
 
-        self.assertEqual(result["release_line"], "gto-0.5.4")
-        self.assertEqual(result["primary_version"], "0.5.4")
+        self.assertEqual(result["release_line"], "ctnh-1.5.0")
+        self.assertEqual(result["primary_version"], "1.5.0")
         self.assertEqual(result["warnings"], [])
 
     def test_warns_when_comparison_project_version_differs(self) -> None:
         client = FakeClient()
-        client.projects[18185]["extra"]["version"] = "0.5.5"
+        client.projects[28999]["extra"]["version"] = "1.5.1"
 
         result = sync_module.resolve_release_line(
             client=client,
-            release_product="gto",
-            primary_project_id=16320,
-            comparison_project_ids=[16525, 18185],
+            release_product="ctnh",
+            primary_project_id=16924,
+            comparison_project_ids=[26999, 28999],
         )
 
-        self.assertEqual(result["release_line"], "gto-0.5.4")
+        self.assertEqual(result["release_line"], "ctnh-1.5.0")
         self.assertEqual(len(result["warnings"]), 1)
-        self.assertIn("18185", result["warnings"][0])
-        self.assertIn("0.5.5", result["warnings"][0])
+        self.assertIn("28999", result["warnings"][0])
+        self.assertIn("1.5.1", result["warnings"][0])
 
     def test_rejects_missing_primary_project_version(self) -> None:
         client = FakeClient()
-        del client.projects[16320]["extra"]["version"]
+        del client.projects[16924]["extra"]["version"]
 
         with self.assertRaises(ValueError):
             sync_module.resolve_release_line(
                 client=client,
-                release_product="gto",
-                primary_project_id=16320,
-                comparison_project_ids=[16525, 18185],
+                release_product="ctnh",
+                primary_project_id=16924,
+                comparison_project_ids=[26999, 28999],
             )
 
 
 class PathSafetyTests(unittest.TestCase):
     def test_build_output_path_rejects_parent_traversal(self) -> None:
-        output_dir = Path("F:/repositories/GTO-Translations")
+        output_dir = Path("F:/repositories/CTNH-Translations")
 
         with self.assertRaises(ValueError):
             sync_module.build_output_path(output_dir, "../escape.json")
 
     def test_build_output_path_rejects_absolute_paths(self) -> None:
-        output_dir = Path("F:/repositories/GTO-Translations")
+        output_dir = Path("F:/repositories/CTNH-Translations")
 
         with self.assertRaises(ValueError):
             sync_module.build_output_path(output_dir, "/escape.json")
 
-    def test_build_output_path_rewrites_gtocore_to_game_overlay_structure(self) -> None:
-        output_dir = Path("F:/repositories/GTO-Translations")
+    def test_build_output_path_rewrites_ctnh_to_game_overlay_structure(self) -> None:
+        output_dir = Path("F:/repositories/CTNH-Translations")
 
-        result = sync_module.build_output_path(output_dir, "GTOCore/en_us.json")
-
-        self.assertEqual(
-            result,
-            output_dir / "en_us" / "resourcepacks" / "gto-lang-en_us" / "assets" / "gtocore" / "lang" / "en_us.json",
-        )
-
-    def test_build_output_path_rewrites_gtodyssey_to_game_overlay_structure(self) -> None:
-        output_dir = Path("F:/repositories/GTO-Translations")
-
-        result = sync_module.build_output_path(output_dir, "GTOdyssey/ja_jp.json")
+        result = sync_module.build_output_path(output_dir, "CTNH/en_us.json")
 
         self.assertEqual(
             result,
-            output_dir / "ja_jp" / "resourcepacks" / "gto-lang-ja_jp" / "assets" / "gto" / "lang" / "ja_jp.json",
+            output_dir / "en_us" / "resourcepacks" / "ctnh-lang-en_us" / "assets" / "ctnh" / "lang" / "en_us.json",
         )
+
+    def test_build_output_path_rewrites_ctnhcore_to_game_overlay_structure(self) -> None:
+        output_dir = Path("F:/repositories/CTNH-Translations")
+
+        result = sync_module.build_output_path(output_dir, "CTNHCore/ja_jp.json")
+
+        self.assertEqual(
+            result,
+            output_dir / "ja_jp" / "resourcepacks" / "ctnh-lang-ja_jp" / "assets" / "ctnhcore" / "lang" / "ja_jp.json",
+        )
+
+
+class RequestUrlValidationTests(unittest.TestCase):
+    def test_rejects_non_http_schemes(self) -> None:
+        with self.assertRaises(ValueError):
+            sync_module.validate_request_url("ftp://paratranz.cn/api")
+        with self.assertRaises(ValueError):
+            sync_module.validate_request_url("file:///etc/passwd")
+
+    def test_rejects_urls_without_host(self) -> None:
+        with self.assertRaises(ValueError):
+            sync_module.validate_request_url("https:///api")
+
+    def test_rejects_localhost_and_loopback(self) -> None:
+        for url in ("https://localhost/api", "https://127.0.0.1/api", "https://[::1]/api"):
+            with self.assertRaises(ValueError):
+                sync_module.validate_request_url(url)
+
+    def test_rejects_private_and_link_local_addresses(self) -> None:
+        for url in (
+            "https://10.1.2.3/api",
+            "https://172.16.0.1/api",
+            "https://192.168.1.1/api",
+            "https://169.254.169.254/api",
+        ):
+            with self.assertRaises(ValueError):
+                sync_module.validate_request_url(url)
+
+    def test_client_rejects_private_base_url_before_requesting(self) -> None:
+        client = sync_module.ParatranzClient(token="test", base_url="https://127.0.0.1/api")
+
+        with self.assertRaises(ValueError):
+            client._get_json("/projects/1")
+
+    def test_accepts_public_https_host(self) -> None:
+        try:
+            sync_module.validate_request_url("https://paratranz.cn/api")
+        except ValueError as error:
+            self.skipTest(f"network unavailable: {error}")
 
 
 class SyncProjectsTests(unittest.TestCase):
@@ -534,7 +573,7 @@ class SyncProjectsTests(unittest.TestCase):
         try:
             temp_root.mkdir(parents=True, exist_ok=False)
             output_dir = temp_root
-            untouched_file = output_dir / "en_us" / "resourcepacks" / "gto-lang-en_us" / "pack.png"
+            untouched_file = output_dir / "en_us" / "resourcepacks" / "ctnh-lang-en_us" / "pack.png"
             untouched_file.parent.mkdir(parents=True, exist_ok=True)
             untouched_file.write_text("not generated", encoding="utf-8")
 
@@ -543,18 +582,18 @@ class SyncProjectsTests(unittest.TestCase):
                 "\n".join(
                     [
                         "release:",
-                        "  product: gto",
-                        "  primary_project_id: 16320",
-                        "  current_version: 0.5.3",
+                        "  product: ctnh",
+                        "  primary_project_id: 16924",
+                        "  current_version: 1.4.9",
                         "projects:",
                         "  - locale: en_us",
-                        "    project_id: 16320",
+                        "    project_id: 16924",
                         "    allowed_stages: [-1, 5, 9]",
                         "  - locale: ru_ru",
-                        "    project_id: 16525",
+                        "    project_id: 26999",
                         "    allowed_stages: [-1, 5, 9]",
                         "  - locale: ja_jp",
-                        "    project_id: 18185",
+                        "    project_id: 28999",
                         "    allowed_stages: [-1, 1, 3, 5, 9]",
                     ]
                 )
@@ -577,38 +616,38 @@ class SyncProjectsTests(unittest.TestCase):
             )
             manifest = sync_module.sync_projects(
                 client=client,
-                release_product="gto",
+                release_product="ctnh",
                 project_entries=[project_config_module.get_project_entries(config)[0]],
                 config_path=config_path,
                 config=config,
                 output_dir=output_dir,
                 manifest_path=manifest_path,
-                primary_project_id=16320,
+                primary_project_id=16924,
             )
 
-            core_path = output_dir / "en_us" / "resourcepacks" / "gto-lang-en_us" / "assets" / "gtocore" / "lang" / "en_us.json"
-            odyssey_path = output_dir / "en_us" / "resourcepacks" / "gto-lang-en_us" / "assets" / "gto" / "lang" / "en_us.json"
-            pack_meta_path = output_dir / "en_us" / "resourcepacks" / "gto-lang-en_us" / "pack.mcmeta"
+            quest_path = output_dir / "en_us" / "resourcepacks" / "ctnh-lang-en_us" / "assets" / "ctnh" / "lang" / "en_us.json"
+            core_path = output_dir / "en_us" / "resourcepacks" / "ctnh-lang-en_us" / "assets" / "ctnhcore" / "lang" / "en_us.json"
+            pack_meta_path = output_dir / "en_us" / "resourcepacks" / "ctnh-lang-en_us" / "pack.mcmeta"
             progress_metadata_path = output_dir / "en_us" / sync_module.PROGRESS_METADATA_FILE_NAME
 
             self.assertTrue(untouched_file.exists())
+            self.assertTrue(quest_path.exists())
             self.assertTrue(core_path.exists())
-            self.assertTrue(odyssey_path.exists())
             self.assertTrue(pack_meta_path.exists())
             self.assertTrue(progress_metadata_path.exists())
-            self.assertEqual(client.translation_calls, [(16320, 10), (16320, 11)])
-            self.assertEqual(client.detailed_string_calls, [(16320, 10), (16320, 11)])
+            self.assertEqual(client.translation_calls, [(16924, 10), (16924, 11)])
+            self.assertEqual(client.detailed_string_calls, [(16924, 10), (16924, 11)])
             self.assertEqual(
                 json.loads(pack_meta_path.read_text(encoding="utf-8"))["pack"]["description"],
-                "GTO translations (en_us) | GTOCore 75.0% | GTOdyssey 100.0%",
+                "CTNH translations (en_us) | CTNH 75.0% | CTNHCore 100.0%",
             )
             self.assertEqual(
                 json.loads(progress_metadata_path.read_text(encoding="utf-8"))["files"][0]["remote_name"],
-                "GTOCore/en_us.json",
+                "CTNH/en_us.json",
             )
 
             self.assertEqual(
-                json.loads(core_path.read_text(encoding="utf-8")),
+                json.loads(quest_path.read_text(encoding="utf-8")),
                 {
                     "key.a": "Alpha",
                     "key.hidden": "Hidden Original",
@@ -616,29 +655,29 @@ class SyncProjectsTests(unittest.TestCase):
                 },
             )
             self.assertEqual(
-                json.loads(odyssey_path.read_text(encoding="utf-8")),
+                json.loads(core_path.read_text(encoding="utf-8")),
                 {
                     "key.d": "Delta",
                 },
             )
 
             written_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-            self.assertEqual(manifest["projects"][0]["project"]["id"], 16320)
-            self.assertEqual(manifest["release_line"], "gto-0.5.4")
-            self.assertEqual(written_manifest["release_line"], "gto-0.5.4")
+            self.assertEqual(manifest["projects"][0]["project"]["id"], 16924)
+            self.assertEqual(manifest["release_line"], "ctnh-1.5.0")
+            self.assertEqual(written_manifest["release_line"], "ctnh-1.5.0")
             self.assertEqual(written_manifest["release_line_warnings"], [])
             updated_config = project_config_module.load_project_config(config_path)
-            self.assertEqual(project_config_module.get_current_version(updated_config), "0.5.4")
-            self.assertEqual(written_manifest["files"][0]["remote_name"], "GTOCore/en_us.json")
+            self.assertEqual(project_config_module.get_current_version(updated_config), "1.5.0")
+            self.assertEqual(written_manifest["files"][0]["remote_name"], "CTNH/en_us.json")
             self.assertEqual(written_manifest["files"][0]["stats"]["emitted_entries"], 3)
             self.assertEqual(written_manifest["files"][0]["stats"]["manual_stage_one_entries"], 1)
             self.assertEqual(written_manifest["files"][0]["allowed_stages"], [-1, 5, 9])
             self.assertEqual(
                 written_manifest["files"][0]["output_path"],
-                "en_us/resourcepacks/gto-lang-en_us/assets/gtocore/lang/en_us.json",
+                "en_us/resourcepacks/ctnh-lang-en_us/assets/ctnh/lang/en_us.json",
             )
             self.assertIn(
-                "en_us/resourcepacks/gto-lang-en_us/pack.mcmeta",
+                "en_us/resourcepacks/ctnh-lang-en_us/pack.mcmeta",
                 written_manifest["generated_paths"],
             )
             self.assertIn(
@@ -650,7 +689,7 @@ class SyncProjectsTests(unittest.TestCase):
 
     def test_sync_projects_cleans_known_generated_paths_without_manifest_and_preserves_extra_files(self) -> None:
         client = FakeClient()
-        client.files[16320] = [client.files[16320][0]]
+        client.files[16924] = [client.files[16924][0]]
         temp_root = REPO_ROOT / f".tmp-sync-managed-cleanup-test-{uuid.uuid4().hex}"
         try:
             temp_root.mkdir(parents=True, exist_ok=False)
@@ -658,13 +697,13 @@ class SyncProjectsTests(unittest.TestCase):
                 temp_root
                 / "en_us"
                 / "resourcepacks"
-                / "gto-lang-en_us"
+                / "ctnh-lang-en_us"
                 / "assets"
-                / "gto"
+                / "ctnhcore"
                 / "lang"
                 / "en_us.json"
             )
-            untouched_file = temp_root / "en_us" / "resourcepacks" / "gto-lang-en_us" / "pack.png"
+            untouched_file = temp_root / "en_us" / "resourcepacks" / "ctnh-lang-en_us" / "pack.png"
             stale_generated_file.parent.mkdir(parents=True, exist_ok=True)
             stale_generated_file.write_text('{"old":"value"}', encoding="utf-8")
             untouched_file.parent.mkdir(parents=True, exist_ok=True)
@@ -675,12 +714,12 @@ class SyncProjectsTests(unittest.TestCase):
                 "\n".join(
                     [
                         "release:",
-                        "  product: gto",
-                        "  primary_project_id: 16320",
-                        "  current_version: 0.5.3",
+                        "  product: ctnh",
+                        "  primary_project_id: 16924",
+                        "  current_version: 1.4.9",
                         "projects:",
                         "  - locale: en_us",
-                        "    project_id: 16320",
+                        "    project_id: 16924",
                         "    allowed_stages: [-1, 5, 9]",
                     ]
                 )
@@ -692,13 +731,13 @@ class SyncProjectsTests(unittest.TestCase):
 
             sync_module.sync_projects(
                 client=client,
-                release_product="gto",
+                release_product="ctnh",
                 project_entries=project_config_module.get_project_entries(config),
                 config_path=config_path,
                 config=config,
                 output_dir=temp_root,
                 manifest_path=manifest_path,
-                primary_project_id=16320,
+                primary_project_id=16924,
             )
 
             self.assertFalse(stale_generated_file.exists())
@@ -716,12 +755,12 @@ class SyncProjectsTests(unittest.TestCase):
                 "\n".join(
                     [
                         "release:",
-                        "  product: gto",
-                        "  primary_project_id: 16320",
-                        "  current_version: 0.5.4",
+                        "  product: ctnh",
+                        "  primary_project_id: 16924",
+                        "  current_version: 1.5.0",
                         "projects:",
                         "  - locale: ja_jp",
-                        "    project_id: 18185",
+                        "    project_id: 28999",
                         "    allowed_stages: [-1, 1, 3, 5, 9]",
                     ]
                 )
@@ -732,16 +771,16 @@ class SyncProjectsTests(unittest.TestCase):
             manifest_path = temp_root / ".paratranz-sync" / "manifest.json"
             manifest = sync_module.sync_projects(
                 client=client,
-                release_product="gto",
+                release_product="ctnh",
                 project_entries=project_config_module.get_project_entries(config),
                 config_path=config_path,
                 config=config,
                 output_dir=temp_root,
                 manifest_path=manifest_path,
-                primary_project_id=16320,
+                primary_project_id=16924,
             )
 
-            ja_path = temp_root / "ja_jp" / "resourcepacks" / "gto-lang-ja_jp" / "assets" / "gtocore" / "lang" / "ja_jp.json"
+            ja_path = temp_root / "ja_jp" / "resourcepacks" / "ctnh-lang-ja_jp" / "assets" / "ctnh" / "lang" / "ja_jp.json"
             self.assertEqual(
                 json.loads(ja_path.read_text(encoding="utf-8")),
                 {
@@ -750,7 +789,7 @@ class SyncProjectsTests(unittest.TestCase):
                     "key.jp.translated": "Translated",
                 },
             )
-            self.assertEqual(client.translation_calls, [(18185, 20)])
+            self.assertEqual(client.translation_calls, [(28999, 20)])
             self.assertEqual(client.detailed_string_calls, [])
             self.assertEqual(manifest["files"][0]["allowed_stages"], [-1, 1, 3, 5, 9])
         finally:

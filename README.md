@@ -36,9 +36,9 @@ Package guide:
 
 Translation contributions should be submitted through Paratranz:
 
-- [en_us](https://paratranz.cn/projects/16320)
-- [ru_ru](https://paratranz.cn/projects/16525)
-- [ja_jp](https://paratranz.cn/projects/18185)
+- [en_us](https://paratranz.cn/projects/20208)
+- [ru_ru](https://paratranz.cn/projects/20210)
+- [ja_jp](https://paratranz.cn/projects/20209)
 
 ## Translation Workflow
 
@@ -58,7 +58,7 @@ Original texts such as quest descriptions, mod texts, and other in-game content 
 
 The contents of this repository are primarily contributed by the community. Unless otherwise noted, the original copyright in translation contributions remains with their respective contributors, and such contributions are distributed under the CC BY-NC-SA 4.0 license used by this repository.
 
-GregTech-Odyssey and the maintainers of this repository do not treat such content as official content and make no express or implied warranties regarding its accuracy, completeness, fitness for a particular purpose, or continued availability.
+The CTNH team and the maintainers of this repository do not treat such content as official content and make no express or implied warranties regarding its accuracy, completeness, fitness for a particular purpose, or continued availability.
 
 ## License
 

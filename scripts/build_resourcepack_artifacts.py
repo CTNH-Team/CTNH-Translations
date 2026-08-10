@@ -7,13 +7,20 @@ from typing import Any, Iterable
 
 from project_config import DEFAULT_CONFIG_PATH, get_configured_locales, load_project_config
 
-RESOURCEPACK_NAME_PREFIX = "gto-lang"
-ARTIFACT_METADATA_FILE_NAME = "gto-artifact-metadata.json"
+RESOURCEPACK_NAME_PREFIX = "ctnh-lang"
+ARTIFACT_METADATA_FILE_NAME = "ctnh-artifact-metadata.json"
 DEFAULT_COMBINED_LABEL = "all-locales"
-PROGRESS_METADATA_FILE_NAME = ".gto-progress.json"
+PROGRESS_METADATA_FILE_NAME = ".ctnh-progress.json"
 MODULE_DISPLAY_NAMES = {
-    "gtocore": "GTOCore",
-    "gtodyssey": "GTOdyssey",
+    "ctnh": "CTNH",
+    "ctnhcore": "CTNHCore",
+    "ctnhmana": "CTNHMana",
+    "ctnhbio": "CTNHBio",
+    "ctnhenergy": "CTNHEnergy",
+    "ctnhastral": "CTNHAstral",
+    "ctnhlib": "CTNHLib",
+    "ctpp": "CTPP",
+    "cei": "CEI",
 }
 
 
@@ -46,7 +53,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--release-line",
-        help="Optional compatibility line such as gto-0.5.4.",
+        help="Optional compatibility line such as ctnh-1.4.2.",
     )
     parser.add_argument(
         "--source-revision",
@@ -163,7 +170,7 @@ def load_locale_progress_metadata(repo_root: Path, locale: str) -> list[dict[str
 
 
 def build_combined_pack_description(repo_root: Path, locales: Iterable[str]) -> str:
-    base_description = f"GTO translations ({DEFAULT_COMBINED_LABEL})"
+    base_description = f"CTNH translations ({DEFAULT_COMBINED_LABEL})"
     matching_entries: list[dict[str, Any]] = []
     for locale in locales:
         matching_entries.extend(load_locale_progress_metadata(repo_root, locale))
