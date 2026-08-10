@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "CTNH translations (en_us) | CTNH 0.0% | CTNHCore 0.0% | CTNHMana 0.0% | CTNHBio 0.0% | CTNHEnergy 0.0% | CTNHAstral 0.0% | CTNHLib 0.0% | CTPP 0.0% | CEI 0.0%",
+    "description": "CTNH translations (en_us) | CTNH 0.0% | CTNHCore 95.9% | CTNHMana 67.9% | CTNHBio 98.4% | CTNHEnergy 89.5% | CTNHAstral 88.2% | CTNHLib 93.9% | CTPP 95.3% | CEI 100.0%",
     "pack_format": 15
   }
 }

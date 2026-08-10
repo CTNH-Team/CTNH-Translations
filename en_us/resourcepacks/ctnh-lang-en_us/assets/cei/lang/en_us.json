@@ -1,1 +1,16 @@
-{}
+{
+  "cei.emi.associated_search.button": "Related",
+  "cei.emi.associated_search.tooltip.disabled": "Associated search is disabled. Click to include related item and fluid recipes",
+  "cei.emi.associated_search.tooltip.enabled": "Associated search is enabled. Click to show only the current stack's recipes",
+  "cei.emi.collapsible.button.collapse_all": "Left click: collapse all (%s groups)",
+  "cei.emi.collapsible.button.collapse_all.right_click": "Right click: collapse all",
+  "cei.emi.collapsible.button.expand_all": "Left click: expand all (%s collapsed)",
+  "cei.emi.duplicate_recipes.button.hidden": "Duplicate",
+  "cei.emi.duplicate_recipes.button.visible": "Duplicate",
+  "cei.emi.duplicate_recipes.tooltip.hidden": "Duplicate recipes are hidden. Click to show Create-derived recipes",
+  "cei.emi.duplicate_recipes.tooltip.visible": "Duplicate recipes are visible. Click to hide Create-derived recipes",
+  "cei.emi.recycling_recipes.button.hidden": "Recycle",
+  "cei.emi.recycling_recipes.button.visible": "Recycle",
+  "cei.emi.recycling_recipes.tooltip.hidden": "Recycling recipes are hidden. Click to show them",
+  "cei.emi.recycling_recipes.tooltip.visible": "Recycling recipes are visible. Click to hide them"
+}
