@@ -1,0 +1,168 @@
+{
+  "files": [
+    {
+      "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/cei/lang/en_us.json",
+      "remote_name": "CEI/en_us.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "manual_stage_one_duplicate_keys": 0,
+        "manual_stage_one_entries": 0,
+        "manual_stage_one_skipped_empty_translation": 0,
+        "manual_stage_one_skipped_non_human_modified": 0,
+        "manual_stage_one_skipped_non_stage_one": 14,
+        "manual_stage_one_total_entries": 14,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 14,
+        "total_entries": 14
+      },
+      "total": 14
+    },
+    {
+      "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/ctnh/lang/en_us.json",
+      "remote_name": "CTNH/en_us.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "manual_stage_one_duplicate_keys": 0,
+        "manual_stage_one_entries": 0,
+        "manual_stage_one_skipped_empty_translation": 0,
+        "manual_stage_one_skipped_non_human_modified": 0,
+        "manual_stage_one_skipped_non_stage_one": 2011,
+        "manual_stage_one_total_entries": 2011,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 2011,
+        "total_entries": 2011
+      },
+      "total": 2011
+    },
+    {
+      "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/ctnhastral/lang/en_us.json",
+      "remote_name": "CTNHAstral/en_us.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "manual_stage_one_duplicate_keys": 0,
+        "manual_stage_one_entries": 0,
+        "manual_stage_one_skipped_empty_translation": 0,
+        "manual_stage_one_skipped_non_human_modified": 0,
+        "manual_stage_one_skipped_non_stage_one": 76,
+        "manual_stage_one_total_entries": 76,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 76,
+        "total_entries": 76
+      },
+      "total": 76
+    },
+    {
+      "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/ctnhbio/lang/en_us.json",
+      "remote_name": "CTNHBio/en_us.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "manual_stage_one_duplicate_keys": 0,
+        "manual_stage_one_entries": 0,
+        "manual_stage_one_skipped_empty_translation": 0,
+        "manual_stage_one_skipped_non_human_modified": 0,
+        "manual_stage_one_skipped_non_stage_one": 183,
+        "manual_stage_one_total_entries": 183,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 183,
+        "total_entries": 183
+      },
+      "total": 183
+    },
+    {
+      "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/ctnhcore/lang/en_us.json",
+      "remote_name": "CTNHCore/en_us.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "manual_stage_one_duplicate_keys": 0,
+        "manual_stage_one_entries": 0,
+        "manual_stage_one_skipped_empty_translation": 0,
+        "manual_stage_one_skipped_non_human_modified": 0,
+        "manual_stage_one_skipped_non_stage_one": 1997,
+        "manual_stage_one_total_entries": 1997,
+        "skipped_empty_translation": 3,
+        "skipped_filtered_stage": 1997,
+        "total_entries": 2000
+      },
+      "total": 2000
+    },
+    {
+      "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/ctnhenergy/lang/en_us.json",
+      "remote_name": "CTNHEnergy/en_us.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "manual_stage_one_duplicate_keys": 0,
+        "manual_stage_one_entries": 0,
+        "manual_stage_one_skipped_empty_translation": 0,
+        "manual_stage_one_skipped_non_human_modified": 0,
+        "manual_stage_one_skipped_non_stage_one": 239,
+        "manual_stage_one_total_entries": 239,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 239,
+        "total_entries": 239
+      },
+      "total": 239
+    },
+    {
+      "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/ctnhlib/lang/en_us.json",
+      "remote_name": "CTNHLib/en_us.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "manual_stage_one_duplicate_keys": 0,
+        "manual_stage_one_entries": 0,
+        "manual_stage_one_skipped_empty_translation": 0,
+        "manual_stage_one_skipped_non_human_modified": 0,
+        "manual_stage_one_skipped_non_stage_one": 33,
+        "manual_stage_one_total_entries": 33,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 33,
+        "total_entries": 33
+      },
+      "total": 33
+    },
+    {
+      "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/ctnhmana/lang/en_us.json",
+      "remote_name": "CTNHMana/en_us.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "manual_stage_one_duplicate_keys": 0,
+        "manual_stage_one_entries": 0,
+        "manual_stage_one_skipped_empty_translation": 0,
+        "manual_stage_one_skipped_non_human_modified": 0,
+        "manual_stage_one_skipped_non_stage_one": 1292,
+        "manual_stage_one_total_entries": 1292,
+        "skipped_empty_translation": 2,
+        "skipped_filtered_stage": 1292,
+        "total_entries": 1294
+      },
+      "total": 1294
+    },
+    {
+      "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/ctpp/lang/en_us.json",
+      "remote_name": "CTPP/en_us.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "manual_stage_one_duplicate_keys": 0,
+        "manual_stage_one_entries": 0,
+        "manual_stage_one_skipped_empty_translation": 0,
+        "manual_stage_one_skipped_non_human_modified": 0,
+        "manual_stage_one_skipped_non_stage_one": 278,
+        "manual_stage_one_total_entries": 278,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 278,
+        "total_entries": 278
+      },
+      "total": 278
+    }
+  ],
+  "locale": "en_us",
+  "schema_version": 1
+}

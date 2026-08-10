@@ -1,0 +1,114 @@
+{
+  "files": [
+    {
+      "output_path": "ja_jp/resourcepacks/ctnh-lang-ja_jp/assets/cei/lang/ja_jp.json",
+      "remote_name": "CEI/ja_jp.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 14,
+        "total_entries": 14
+      },
+      "total": 14
+    },
+    {
+      "output_path": "ja_jp/resourcepacks/ctnh-lang-ja_jp/assets/ctnh/lang/ja_jp.json",
+      "remote_name": "CTNH/ja_jp.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 2011,
+        "total_entries": 2011
+      },
+      "total": 2011
+    },
+    {
+      "output_path": "ja_jp/resourcepacks/ctnh-lang-ja_jp/assets/ctnhastral/lang/ja_jp.json",
+      "remote_name": "CTNHAstral/ja_jp.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 76,
+        "total_entries": 76
+      },
+      "total": 76
+    },
+    {
+      "output_path": "ja_jp/resourcepacks/ctnh-lang-ja_jp/assets/ctnhbio/lang/ja_jp.json",
+      "remote_name": "CTNHBio/ja_jp.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 183,
+        "total_entries": 183
+      },
+      "total": 183
+    },
+    {
+      "output_path": "ja_jp/resourcepacks/ctnh-lang-ja_jp/assets/ctnhcore/lang/ja_jp.json",
+      "remote_name": "CTNHCore/ja_jp.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "skipped_empty_translation": 3,
+        "skipped_filtered_stage": 1997,
+        "total_entries": 2000
+      },
+      "total": 2000
+    },
+    {
+      "output_path": "ja_jp/resourcepacks/ctnh-lang-ja_jp/assets/ctnhenergy/lang/ja_jp.json",
+      "remote_name": "CTNHEnergy/ja_jp.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 239,
+        "total_entries": 239
+      },
+      "total": 239
+    },
+    {
+      "output_path": "ja_jp/resourcepacks/ctnh-lang-ja_jp/assets/ctnhlib/lang/ja_jp.json",
+      "remote_name": "CTNHLib/ja_jp.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 33,
+        "total_entries": 33
+      },
+      "total": 33
+    },
+    {
+      "output_path": "ja_jp/resourcepacks/ctnh-lang-ja_jp/assets/ctnhmana/lang/ja_jp.json",
+      "remote_name": "CTNHMana/ja_jp.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "skipped_empty_translation": 2,
+        "skipped_filtered_stage": 1292,
+        "total_entries": 1294
+      },
+      "total": 1294
+    },
+    {
+      "output_path": "ja_jp/resourcepacks/ctnh-lang-ja_jp/assets/ctpp/lang/ja_jp.json",
+      "remote_name": "CTPP/ja_jp.json",
+      "stats": {
+        "duplicate_keys": 0,
+        "emitted_entries": 0,
+        "skipped_empty_translation": 0,
+        "skipped_filtered_stage": 278,
+        "total_entries": 278
+      },
+      "total": 278
+    }
+  ],
+  "locale": "ja_jp",
+  "schema_version": 1
+}
