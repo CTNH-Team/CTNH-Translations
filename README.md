@@ -1,8 +1,8 @@
-# GTO-Translations
+# CTNH-Translations
 
 **English** | [简体中文](README_zh.md)
 
-Central repository for community-driven translations of GTO.
+Central repository for community-driven translations of CTNH.
 
 Translations from Paratranz are periodically synchronized to this repository.
 
@@ -12,9 +12,9 @@ Only manually reviewed translation content is included here.
 
 ## Downloads
 
-Stable releases can be downloaded from [GitHub Releases](https://github.com/GregTech-Odyssey/GTO-Translations/releases).
+Stable releases can be downloaded from [GitHub Releases](https://github.com/GregTech-Odyssey/CTNH-Translations/releases).
 
-Latest snapshot builds can be downloaded from [GitHub Actions](https://github.com/GregTech-Odyssey/GTO-Translations/actions) artifacts in the `Sync Paratranz Translations` workflow.
+Latest snapshot builds can be downloaded from [GitHub Actions](https://github.com/GregTech-Odyssey/CTNH-Translations/actions) artifacts in the `Sync Paratranz Translations` workflow.
 
 How to use the downloaded zip:
 
@@ -25,10 +25,10 @@ How to use the downloaded zip:
 
 Package guide:
 
-- `gto-lang-en_us-<version>.zip`: English resource pack
-- `gto-lang-ru_ru-<version>.zip`: Russian resource pack
-- `gto-lang-ja_jp-<version>.zip`: Japanese resource pack
-- `gto-lang-all-locales-<version>.zip`: Combined package containing all supported locales
+- `CTNH-lang-en_us-<version>.zip`: English resource pack
+- `CTNH-lang-ru_ru-<version>.zip`: Russian resource pack
+- `CTNH-lang-ja_jp-<version>.zip`: Japanese resource pack
+- `CTNH-lang-all-locales-<version>.zip`: Combined package containing all supported locales
 
 ---
 
