@@ -8,3 +8,4 @@ scripts/__pycache__/
 .tmp-artifact-test-*/
 123/
 mc-lang/
+create-new-horizon/

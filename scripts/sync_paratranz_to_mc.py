@@ -10,7 +10,7 @@ from pathlib import Path, PurePosixPath
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse
-from urllib.request import Request, urlopen
+from urllib.request import HTTPRedirectHandler, Request, build_opener, urlopen
 
 import en_us_manual_stage_one as en_us_stage_one
 from project_config import (
@@ -58,6 +58,21 @@ MODULE_DISPLAY_NAMES = {
 }
 EN_US_LOCALE = "en_us"
 ALLOWED_URL_SCHEMES = {"http", "https"}
+RETRYABLE_HTTP_CODES = {429, 500, 502, 503, 504}
+
+
+class _NoRedirectHandler(HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        raise RuntimeError(f"Redirect not allowed: {req.full_url} -> {newurl}")
+
+
+# Redirects are refused so a validated public URL cannot bounce into a
+# private/loopback target after the guard has already passed.
+_OPENER = build_opener(_NoRedirectHandler())
+
+
+class RetryableRequestError(RuntimeError):
+    pass
 
 
 def validate_request_url(url: str) -> None:
@@ -101,27 +116,68 @@ class ParatranzClient:
             "User-Agent": "ctnh-lang-sync/1.0",
         }
 
+    def _request(
+        self,
+        url: str,
+        method: str,
+        headers: dict[str, str] | None = None,
+        data: bytes | None = None,
+    ) -> Any:
+        """Send one HTTP request after an inline SSRF guard.
+
+        Only http/https to a public host is allowed: the host is resolved and
+        loopback, private, link-local, reserved, multicast, and unspecified
+        addresses are rejected before any bytes are sent. Redirects are refused.
+        """
+        parsed = urlparse(url)
+        if parsed.scheme not in ALLOWED_URL_SCHEMES:
+            raise ValueError(f"Unsupported URL scheme: {parsed.scheme}")
+        host = parsed.hostname
+        if not host:
+            raise ValueError(f"URL is missing a host: {url}")
+        if host.lower() == "localhost":
+            raise ValueError(f"Localhost is not allowed: {host}")
+        try:
+            resolved = {item[4][0] for item in socket.getaddrinfo(host, None, proto=socket.IPPROTO_TCP)}
+        except OSError as error:
+            raise ValueError(f"Could not resolve host: {host}") from error
+        for ip_text in resolved:
+            ip = ipaddress.ip_address(ip_text)
+            if (
+                ip.is_loopback
+                or ip.is_private
+                or ip.is_link_local
+                or ip.is_reserved
+                or ip.is_multicast
+                or ip.is_unspecified
+            ):
+                raise ValueError(f"Host resolves to a non-public address: {host} -> {ip}")
+
+        request = Request(url=url, headers=headers or self.headers, method=method, data=data)
+        try:
+            with _OPENER.open(request, timeout=self.timeout) as response:
+                body = response.read().decode("utf-8")
+        except HTTPError as error:
+            detail = error.read().decode("utf-8", errors="ignore")
+            message = f"HTTP {error.code} for {url}: {detail}"
+            if error.code in RETRYABLE_HTTP_CODES:
+                raise RetryableRequestError(message) from error
+            raise RuntimeError(message) from error
+        except URLError as error:
+            raise RetryableRequestError(f"Request failed for {url}: {error}") from error
+        return json.loads(body)
+
     def _get_json(self, path: str) -> Any:
         url = f"{self.base_url}{path}"
-        validate_request_url(url)
         last_error: Exception | None = None
 
         for attempt in range(1, MAX_RETRIES + 1):
-            request = Request(url=url, headers=self.headers, method="GET")
             try:
-                with urlopen(request, timeout=self.timeout) as response:
-                    body = response.read().decode("utf-8")
-                return json.loads(body)
-            except HTTPError as error:
-                last_error = error
-                if error.code not in (429, 500, 502, 503, 504) or attempt == MAX_RETRIES:
-                    detail = error.read().decode("utf-8", errors="ignore")
-                    raise RuntimeError(f"HTTP {error.code} for {url}: {detail}") from error
-            except URLError as error:
+                return self._request(url, method="GET")
+            except RetryableRequestError as error:
                 last_error = error
                 if attempt == MAX_RETRIES:
-                    raise RuntimeError(f"Request failed for {url}: {error}") from error
-
+                    raise RuntimeError(f"Request failed for {url}: {last_error}") from error
             time.sleep(2 ** (attempt - 1))
 
         raise RuntimeError(f"Request failed for {url}: {last_error}")
@@ -140,6 +196,47 @@ class ParatranzClient:
 
     def get_file_translation(self, project_id: int, file_id: int) -> Any:
         return self._get_json(f"/projects/{project_id}/files/{file_id}/translation")
+
+    def upload_file(
+        self,
+        project_id: int,
+        filename: str,
+        content: bytes,
+        path: str,
+        file_id: int | None = None,
+    ) -> Any:
+        """Create or update a translation file in the given project.
+
+        POST /projects/{id}/files creates a new file; POST /projects/{id}/files/{fid}
+        updates an existing one in place with incremental insert/update/remove
+        semantics, preserving translations for unchanged keys.
+        """
+        suffix = f"/{file_id}" if file_id is not None else ""
+        url = f"{self.base_url}/projects/{project_id}/files{suffix}"
+        boundary = f"----ctnh-lang-{os.urandom(8).hex()}"
+        payload = bytearray()
+        for field_name, field_value in (("path", path),):
+            payload += (
+                f"--{boundary}\r\n"
+                f'Content-Disposition: form-data; name="{field_name}"\r\n\r\n'
+                f"{field_value}\r\n"
+            ).encode("utf-8")
+        payload += (
+            f"--{boundary}\r\n"
+            f'Content-Disposition: form-data; name="file"; filename="{filename}"\r\n'
+            "Content-Type: application/json\r\n\r\n"
+        ).encode("utf-8")
+        payload += content
+        payload += f"\r\n--{boundary}--\r\n".encode("utf-8")
+        return self._request(
+            url,
+            method="POST",
+            headers={
+                **self.headers,
+                "Content-Type": f"multipart/form-data; boundary={boundary}",
+            },
+            data=bytes(payload),
+        )
 
 
 def parse_args() -> argparse.Namespace:

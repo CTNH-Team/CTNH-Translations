@@ -26,6 +26,31 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Checkout Create-New-Horizon quest source
+        uses: actions/checkout@v4
+        with:
+          repository: CTNH-Team/Create-New-Horizon
+          ref: dev
+          path: create-new-horizon
+          fetch-depth: 1
+
+      - name: Generate quest Chinese source
+        run: |
+          python -m pip install --disable-pip-version-check -r create-new-horizon/.github/localization/requirements.txt
+          python create-new-horizon/.github/localization/ftbquest_localization.py
+          python create-new-horizon/.github/localization/chinese_converter.py
+
+      - name: Sync quest source to Paratranz
+        env:
+          PARATRANZ_TOKEN: ${{ secrets.PARATRANZ_TOKEN }}
+        run: |
+          if [ -z "$PARATRANZ_TOKEN" ]; then
+            echo "PARATRANZ_TOKEN is not configured; skipping quest source sync."
+            exit 1
+          fi
+          python scripts/sync_quest_source_to_paratranz.py \
+            --zh-json create-new-horizon/config/openloader/resources/ctnh_quests/assets/ctnh/lang/zh_cn.json
+
       - name: Run tests
         run: python -m unittest discover -s tests -v
 
