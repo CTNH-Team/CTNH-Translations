@@ -23,18 +23,18 @@
       "remote_name": "CTNH/en_us.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 40,
+        "emitted_entries": 0,
         "manual_stage_one_duplicate_keys": 0,
-        "manual_stage_one_entries": 40,
+        "manual_stage_one_entries": 0,
         "manual_stage_one_skipped_empty_translation": 0,
         "manual_stage_one_skipped_non_human_modified": 0,
-        "manual_stage_one_skipped_non_stage_one": 2760,
-        "manual_stage_one_total_entries": 2800,
+        "manual_stage_one_skipped_non_stage_one": 2805,
+        "manual_stage_one_total_entries": 2805,
         "skipped_empty_translation": 0,
-        "skipped_filtered_stage": 2760,
-        "total_entries": 2800
+        "skipped_filtered_stage": 2805,
+        "total_entries": 2805
       },
-      "total": 2800
+      "total": 2805
     },
     {
       "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/ctnhastral/lang/en_us.json",
