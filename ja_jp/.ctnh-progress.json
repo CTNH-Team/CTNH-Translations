@@ -19,10 +19,10 @@
         "duplicate_keys": 0,
         "emitted_entries": 0,
         "skipped_empty_translation": 0,
-        "skipped_filtered_stage": 2813,
-        "total_entries": 2813
+        "skipped_filtered_stage": 2822,
+        "total_entries": 2822
       },
-      "total": 2813
+      "total": 2822
     },
     {
       "output_path": "ja_jp/resourcepacks/ctnh-lang-ja_jp/assets/ctnhastral/lang/ja_jp.json",
@@ -53,9 +53,9 @@
       "remote_name": "CTNHCore/ja_jp.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 305,
+        "emitted_entries": 394,
         "skipped_empty_translation": 3,
-        "skipped_filtered_stage": 1692,
+        "skipped_filtered_stage": 1603,
         "total_entries": 2000
       },
       "total": 2000
