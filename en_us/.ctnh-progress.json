@@ -28,13 +28,13 @@
         "manual_stage_one_entries": 0,
         "manual_stage_one_skipped_empty_translation": 0,
         "manual_stage_one_skipped_non_human_modified": 0,
-        "manual_stage_one_skipped_non_stage_one": 2822,
-        "manual_stage_one_total_entries": 2822,
+        "manual_stage_one_skipped_non_stage_one": 2823,
+        "manual_stage_one_total_entries": 2823,
         "skipped_empty_translation": 0,
-        "skipped_filtered_stage": 2822,
-        "total_entries": 2822
+        "skipped_filtered_stage": 2823,
+        "total_entries": 2823
       },
-      "total": 2822
+      "total": 2823
     },
     {
       "output_path": "en_us/resourcepacks/ctnh-lang-en_us/assets/ctnhastral/lang/en_us.json",
