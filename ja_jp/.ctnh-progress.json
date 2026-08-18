@@ -53,9 +53,9 @@
       "remote_name": "CTNHCore/ja_jp.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 393,
+        "emitted_entries": 397,
         "skipped_empty_translation": 3,
-        "skipped_filtered_stage": 1604,
+        "skipped_filtered_stage": 1600,
         "total_entries": 2000
       },
       "total": 2000
