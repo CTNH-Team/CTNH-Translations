@@ -5,9 +5,9 @@
       "remote_name": "CEI/ru_ru.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 0,
+        "emitted_entries": 8,
         "skipped_empty_translation": 0,
-        "skipped_filtered_stage": 14,
+        "skipped_filtered_stage": 6,
         "total_entries": 14
       },
       "total": 14

@@ -1,1 +1,10 @@
-{}
+{
+  "cei.emi.associated_search.button": "Связанный поиск",
+  "cei.emi.associated_search.tooltip.disabled": "Связанный поиск отключён. Нажмите, чтобы увидеть связанные предметы и рецепты жидкостей",
+  "cei.emi.associated_search.tooltip.enabled": "Связанный поиск активен. Нажмите, чтобы увидеть рецепт этого предмета",
+  "cei.emi.collapsible.button.collapse_all": "ЛКМ — свернуть все группы (%s)",
+  "cei.emi.collapsible.button.collapse_all.right_click": "ПКМ — свернуть все",
+  "cei.emi.collapsible.button.expand_all": "ЛКМ — развернуть всё (%s свёрнуто)",
+  "cei.emi.recycling_recipes.tooltip.hidden": "Формула утилизации в данный момент скрыта, а после нажатия кнопки форма утилизации будет показана",
+  "cei.emi.recycling_recipes.tooltip.visible": "В данный момент отображается формула утилизации, а после нажатия кнопки формула утилизации будет скрыта"
+}
