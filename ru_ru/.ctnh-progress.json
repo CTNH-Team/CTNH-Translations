@@ -53,9 +53,9 @@
       "remote_name": "CTNHCore/ru_ru.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 68,
+        "emitted_entries": 83,
         "skipped_empty_translation": 3,
-        "skipped_filtered_stage": 1929,
+        "skipped_filtered_stage": 1914,
         "total_entries": 2000
       },
       "total": 2000
