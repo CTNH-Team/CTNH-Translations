@@ -1,1 +1,16 @@
-{}
+{
+  "block.ctnhbio.advanced_neural_model_accessor": "高度なデータモデルインターフェース",
+  "block.ctnhbio.circulatory_system": "循環システム",
+  "block.ctnhbio.cogni_assembler": "意識組立機",
+  "block.ctnhbio.consciousness_controller": "意識コントローラー",
+  "block.ctnhbio.consciousness_linker": "意識リンク装置",
+  "block.ctnhbio.consciousness_sensor_glass": "意識センサーガラス",
+  "block.ctnhbio.ev_bioelectric_forge": "§5システム生体電気炉§r",
+  "block.ctnhbio.ev_bioreactor": "§5システム反応チャンバー§r",
+  "block.ctnhbio.ev_brain_in_a_vat": "§5EV 培養槽内の脳§r",
+  "block.ctnhbio.ev_decomposer": "§5システム分解者§r",
+  "block.ctnhbio.ev_digester": "§5システム消化器§r",
+  "block.ctnhbio.flesh_casing": "血肉のマシンケーシング",
+  "block.ctnhbio.great_flesh": "巨大な肉の塊",
+  "block.ctnhbio.hostile_observer": "敵対観測所"
+}
