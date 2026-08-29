@@ -1,1 +1,5 @@
-{}
+{
+  "command.ctnhlib.copy.hover": "クリックしてコピー",
+  "command.ctnhlib.error.empty_hand": "メインハンドに何も持っていません。",
+  "command.ctnhlib.error.player_only": "このコマンドはプレイヤーのみが実行できます。"
+}
