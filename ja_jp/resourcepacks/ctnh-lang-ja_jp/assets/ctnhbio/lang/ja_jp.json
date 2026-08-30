@@ -1,5 +1,7 @@
 {
+  "block.ctnhbio.acid_flesh_casing": "酸液マシンケーシング",
   "block.ctnhbio.advanced_neural_model_accessor": "高度なデータモデルインターフェース",
+  "block.ctnhbio.bio_acid_casing": "バイオ酸マシンケーシング",
   "block.ctnhbio.circulatory_system": "循環システム",
   "block.ctnhbio.cogni_assembler": "意識組立機",
   "block.ctnhbio.consciousness_controller": "意識コントローラー",
@@ -12,5 +14,11 @@
   "block.ctnhbio.ev_digester": "§5システム消化器§r",
   "block.ctnhbio.flesh_casing": "血肉のマシンケーシング",
   "block.ctnhbio.great_flesh": "巨大な肉の塊",
-  "block.ctnhbio.hostile_observer": "敵対観測所"
+  "block.ctnhbio.hostile_observer": "敵対観測所",
+  "block.ctnhbio.hv_bioelectric_forge": "§6器官生物電気炉§r",
+  "block.ctnhbio.hv_bioreactor": "§6器官反応室§r",
+  "block.ctnhbio.hv_brain_in_a_vat": "§6HV 槽中大脑§r",
+  "block.ctnhbio.hv_decomposer": "§6器官分解者§r",
+  "block.ctnhbio.hv_digester": "§6器官消化器§r",
+  "block.ctnhbio.impermeable_membrane": "不透過膜"
 }

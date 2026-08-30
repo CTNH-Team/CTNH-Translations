@@ -17,9 +17,9 @@
       "remote_name": "CTNH/ja_jp.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 0,
+        "emitted_entries": 63,
         "skipped_empty_translation": 0,
-        "skipped_filtered_stage": 2823,
+        "skipped_filtered_stage": 2760,
         "total_entries": 2823
       },
       "total": 2823
@@ -41,9 +41,9 @@
       "remote_name": "CTNHBio/ja_jp.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 14,
+        "emitted_entries": 22,
         "skipped_empty_translation": 0,
-        "skipped_filtered_stage": 169,
+        "skipped_filtered_stage": 161,
         "total_entries": 183
       },
       "total": 183
@@ -53,9 +53,9 @@
       "remote_name": "CTNHCore/ja_jp.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 1139,
+        "emitted_entries": 1146,
         "skipped_empty_translation": 3,
-        "skipped_filtered_stage": 858,
+        "skipped_filtered_stage": 851,
         "total_entries": 2000
       },
       "total": 2000
@@ -77,9 +77,9 @@
       "remote_name": "CTNHLib/ja_jp.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 3,
+        "emitted_entries": 33,
         "skipped_empty_translation": 0,
-        "skipped_filtered_stage": 30,
+        "skipped_filtered_stage": 0,
         "total_entries": 33
       },
       "total": 33
