@@ -1,3 +1,21 @@
 {
-  "block.ctnhastral.astral_cobblestone": "星輝の丸石"
+  "block.ctnhastral.astral_cobblestone": "星輝の丸石",
+  "block.ctnhastral.hv_rocket_fuel_tank": "基本ロケット燃料タンク",
+  "block.ctnhastral.mars_base_platform": "火星基地プラットフォーム",
+  "block.ctnhastral.martian_moss": "火星の苔",
+  "block.ctnhastral.obsidian_channel": "黒曜石の通路",
+  "block.ctnhastral.reinforced_martian_glass": "強化火星ガラス",
+  "block.ctnhastral.rocket_assembly_platform": "ロケット組立台",
+  "block.ctnhastral.stargate_core": "スターゲートコア",
+  "block.ctnhastral.stargate_frame": "スターゲートフレーム",
+  "block.ctnhastral.stargate_light_prism": "スターゲート屈折プリズム",
+  "ctnhastral.camachines.ctnhmachineoxygenenrichertooltip0": "密閉空間内で呼吸可能な環境を維持するために、酸素流体を消費します。",
+  "ctnhastral.camachines.ctnhmachineoxygenenrichertooltip1": "半径%sブロックの密閉空間に酸素を供給できます",
+  "ctnhastral.oxygencondition.ctnhmachineoxygenrequired": "この機械は酸素を供給できる環境で稼働させる必要があります",
+  "ctnhastral.oxygenenrichermachine.ctnhmachineoxygenenrichernoinput": "酸素が不足しています",
+  "enchantment.ctnhastral.vacuum_seal.desc": "虚空によるダメージを受けなくなります。注：すべての装備にこのエンチャントが付与されている必要があります。",
+  "gtceu.rocket_assembly_platform_recipe": "ロケット組立台",
+  "gui.ctnhastral.rocket.clear": "ロケットを消去",
+  "material.ctnhastral.acid": "酸液",
+  "message.ctnhastral.rocket.launch": "%1$sで発射する"
 }

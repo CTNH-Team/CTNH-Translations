@@ -1,1 +1,9 @@
-{}
+{
+  "ahcc_rune.ctnhmana.ahccrunelang.ahccruneair.0": "[AHCC] 風のルーン",
+  "ahcc_rune.ctnhmana.ahccrunelang.ahccruneair.1": "冷却輪：風のルーン1個につき20tick短縮、最低20tick",
+  "ahcc_rune.ctnhmana.ahccrunelang.ahccruneair.2": "自身の占用：安定度＋1",
+  "ahcc_rune.ctnhmana.ahccrunelang.ahccruneautumn.2": "自身の占有により安定度＋2",
+  "ahcc_rune.ctnhmana.ahccrunelang.ahccruneearth.2": "自身の占用：安定度＋1",
+  "ahcc_rune.ctnhmana.ahccrunelang.ahccrunefire.2": "自身の占用：安定度＋1",
+  "ahcc_rune.ctnhmana.ahccrunelang.ahccrunemana.1": "自身の占有により安定度＋2"
+}
