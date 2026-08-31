@@ -17,9 +17,9 @@
       "remote_name": "CTNH/ja_jp.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 63,
+        "emitted_entries": 84,
         "skipped_empty_translation": 0,
-        "skipped_filtered_stage": 2760,
+        "skipped_filtered_stage": 2739,
         "total_entries": 2823
       },
       "total": 2823
@@ -53,9 +53,9 @@
       "remote_name": "CTNHCore/ja_jp.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 1347,
+        "emitted_entries": 1358,
         "skipped_empty_translation": 3,
-        "skipped_filtered_stage": 650,
+        "skipped_filtered_stage": 639,
         "total_entries": 2000
       },
       "total": 2000
