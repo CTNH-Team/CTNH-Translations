@@ -81,5 +81,20 @@
   "block.ctnhcore.hv_digital_miner": "§6Улучшенный цифровой шахтёр II§r",
   "block.ctnhcore.hv_energy_output_hatch_4a": "Энергетический выходной разъем (4A §6HV§r)",
   "block.ctnhcore.hv_neutron_accelerator": "§6HV§r Ускоритель нейтронов",
-  "block.ctnhcore.hv_personal_computer": "§6HV§r персональный компьютер"
+  "block.ctnhcore.hv_personal_computer": "§6HV§r персональный компьютер",
+  "block.ctnhcore.hyper_casing": "Усиленный черным плутонием корпус из наквада-сплава",
+  "block.ctnhcore.hyper_plasma_turbine": "Гиперплазменная турбина",
+  "block.ctnhcore.hyper_plasma_turbine_rotor": "Ротор гиперплазменной турбина",
+  "block.ctnhcore.industrial_primitive_blast_furnace": "Промышленная примитивная доменная печь",
+  "block.ctnhcore.infinity_coil_block": "Бесконечная катушка",
+  "block.ctnhcore.ion_exchanger": "Ионообменник ",
+  "block.ctnhcore.iridium_casing": "Иридиевый корпус",
+  "block.ctnhcore.iv_chemical_generator": "Поглотитель химической энергии",
+  "block.ctnhcore.iv_dehydrator": "§9Элитный дегидратор §r",
+  "block.ctnhcore.iv_large_digital_miner": "§9Большой цифровой шахтёр (EV)",
+  "block.ctnhcore.iv_naquadah_reactor": "§9Элитный наквадовый генератор II",
+  "block.ctnhcore.iv_neutron_accelerator": "§9IV Ускоритель нейтронов",
+  "block.ctnhcore.iv_personal_computer": "§9IV§r персональный компьютер",
+  "block.ctnhcore.iv_rocket_engine": " §9Элитный ракетный двигатель II",
+  "block.ctnhcore.large_bottle": "Ферментационная колба"
 }
