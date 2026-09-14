@@ -17,9 +17,9 @@
       "remote_name": "CTNH/ja_jp.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 85,
+        "emitted_entries": 131,
         "skipped_empty_translation": 0,
-        "skipped_filtered_stage": 2738,
+        "skipped_filtered_stage": 2692,
         "total_entries": 2823
       },
       "total": 2823
