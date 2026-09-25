@@ -53,9 +53,9 @@
       "remote_name": "CTNHCore/ja_jp.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 1358,
+        "emitted_entries": 1357,
         "skipped_empty_translation": 3,
-        "skipped_filtered_stage": 639,
+        "skipped_filtered_stage": 640,
         "total_entries": 2000
       },
       "total": 2000
@@ -65,9 +65,9 @@
       "remote_name": "CTNHEnergy/ja_jp.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 0,
+        "emitted_entries": 2,
         "skipped_empty_translation": 0,
-        "skipped_filtered_stage": 239,
+        "skipped_filtered_stage": 237,
         "total_entries": 239
       },
       "total": 239
@@ -101,9 +101,9 @@
       "remote_name": "CTPP/ja_jp.json",
       "stats": {
         "duplicate_keys": 0,
-        "emitted_entries": 3,
+        "emitted_entries": 218,
         "skipped_empty_translation": 0,
-        "skipped_filtered_stage": 275,
+        "skipped_filtered_stage": 60,
         "total_entries": 278
       },
       "total": 278
